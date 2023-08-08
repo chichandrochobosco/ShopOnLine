@@ -5,23 +5,34 @@ package shoponline_lobosco_et36_5.pkg3;
  *
  * @author Licha
  */
-public class Producto {
+public abstract class Producto {
     protected String desc;
     protected int cod;
     protected double precio;
-    
-    public Producto(String desc, double precio){
+
+    public Producto(String desc, double precio, int cod) {
         this.desc = desc;
         this.precio = precio;
+        this.cod = cod;
     }
 
     @Override
     public String toString() {
-        return "Producto{" + "desc=" + desc + ", cod=" + cod + ", precio=" + precio + '}';
+        return this.desc + "........ $ " + this.precio;
     }
 
-    public double getPrecio() {
-        return precio;
+    public String getDesc() {
+        return desc;
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
+
+    public abstract double getPrecio();
+
+    public void setPrecio(double precio) {
+        this.precio = precio;
     }
     
     

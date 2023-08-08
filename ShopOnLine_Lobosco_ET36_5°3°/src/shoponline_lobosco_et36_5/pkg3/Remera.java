@@ -6,19 +6,30 @@ package shoponline_lobosco_et36_5.pkg3;
  * @author Licha
  */
 public class Remera extends Producto{
-    private char talle;
+    private String talle;
 
-    public Remera(char talle, String desc, double precio) {
-        super(desc, precio);
+    public Remera(String talle, String desc, double precio, int cod) {
+        super(desc, precio, cod);
         this.talle = talle;
     }
 
     @Override
     public String toString() {
-        return "Remera{" + "talle=" + talle + '}';
+        return "Remera: "+"talle = "+talle;
     }
 
     public double getPrecio() {
+        if(talle=="S"){
+            precio+=(precio*5/100);
+        }else if(talle=="M"){
+            precio+=(precio*10/100);
+        }
+        else if(talle=="L"){
+            precio+=(precio*15/100);
+        }else if(talle=="XL"){
+            precio+=(precio*20/100);
+        }
+        
         return precio;
     }
     

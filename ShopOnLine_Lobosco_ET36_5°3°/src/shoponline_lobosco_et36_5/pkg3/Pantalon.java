@@ -11,8 +11,8 @@ package shoponline_lobosco_et36_5.pkg3;
 public class Pantalon extends Producto{
     private int talle;
 
-    public Pantalon(int talle, String desc, double precio) {
-        super(desc, precio);
+    public Pantalon(int talle, String desc, double precio, int cod) {
+        super(desc, precio, cod);
         this.talle = talle;
     }
 
@@ -22,6 +22,15 @@ public class Pantalon extends Producto{
     }
 
     public double getPrecio() {
+        if(desc=="Oxford"){
+            precio+=(precio*15/100);
+        }else if(desc=="Skinny"){
+            precio+=(precio*25/100);
+        }
+        else if(desc=="Recto"){
+            precio-=(precio*15/100);
+        }
+
         return precio;
     }
     
