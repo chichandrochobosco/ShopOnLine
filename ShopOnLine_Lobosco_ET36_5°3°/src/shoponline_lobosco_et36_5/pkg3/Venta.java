@@ -21,11 +21,16 @@ public class Venta {
         this.listProd = new ArrayList();
     }
     
-    public void agregarProducto(){
-        
+    public void agregarProducto(Producto producto){
+        listProd.add(producto);
     }
     public double calcularImporteTotal(){
-        return 0;
+        double importe = 0;
+        for(int i =0;i<listProd.size(); i++){
+        
+        importe += listProd.get(i).getPrecio() ;
+    }
+        return importe;
     }
     public void imprimirFactura(){
         

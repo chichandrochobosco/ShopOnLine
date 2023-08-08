@@ -4,6 +4,8 @@
  */
 package shoponline_lobosco_et36_5.pkg3;
 
+import java.time.LocalDate;
+
 /**
  *
  * @author Licha
@@ -20,6 +22,11 @@ public class Main {
         al principio una funcion para agregar productos y que dps se vea el listado de los mismos.
         qur funcion cumple cliente.
         */
+        LocalDate fecha = LocalDate.now();
+        Cliente c = new Cliente("Carlos");
+        Venta v = new Venta(fecha, c );
+        
+        //v.agregarProducto(p);
 
     }
     

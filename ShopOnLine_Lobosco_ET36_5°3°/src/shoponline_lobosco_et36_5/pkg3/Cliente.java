@@ -9,5 +9,11 @@ package shoponline_lobosco_et36_5.pkg3;
  * @author Licha
  */
 public class Cliente {
+    private String nombre;
+
+    public Cliente(String nombre) {
+        this.nombre = nombre;
+    }
+    
     
 }
