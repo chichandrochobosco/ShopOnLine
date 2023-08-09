@@ -24,23 +24,23 @@ public class Accesorio extends Producto{
     }
 
     public double getPrecio() {
+        double precioFinal=0;
         if(metal=="Acero"){
-            precio+=(precio*10/100);
+            precioFinal=precio+(precio*10/100);
         }else if(metal=="Plata"){
-            precio+=(precio*15/100);
+            precioFinal=precio+(precio*15/100);
         }
         else if(metal=="Oro"){
-            precio+=(precio*20/100);
+            precioFinal=precio+(precio*20/100);
         }
         if(peso>=200 ){
-            precio+=(precio*10/100);
+            precioFinal=precio+(precio*10/100);
         }else if(precio>=100 && peso<200){
-            precio+=(precio*6/100);
+            precioFinal=precio+(precio*6/100);
         }else if(precio>=0 && peso<100){
-            precio+=(precio*3/100);
+            precioFinal=precio+(precio*3/100);
         }
-            
-        return precio;
+        return precioFinal;
     }
     
     

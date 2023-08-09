@@ -10,7 +10,7 @@ import java.util.ArrayList;
  */
 public class Venta {
     private static int cantVentas = 1090;
-    private int nroFact;
+    private int nroFact = cantVentas;
     private ArrayList<Producto> listProd;
     private Cliente cliente;
     private LocalDate fecha;
@@ -21,6 +21,9 @@ public class Venta {
         this.listProd = new ArrayList();
     }
     
+    public void sumarNro(){
+        nroFact++;
+    }
     public void agregarProducto(Producto producto){
         listProd.add(producto);
     }
@@ -29,11 +32,13 @@ public class Venta {
         for(int i =0;i<listProd.size(); i++){
         
         importe += listProd.get(i).getPrecio() ;
-    }
+        }
+        
+        System.out.println("importe: "+importe);
         return importe;
     }
     public void imprimirFactura(){
-        System.out.println("Factura N° "+(cantVentas+1)+" - " + fecha);
+        System.out.println("Factura N° "+(nroFact+1)+" - " + fecha);
         for(int i =0;i<listProd.size(); i++){
         
         System.out.println(listProd.get(i).toString());  

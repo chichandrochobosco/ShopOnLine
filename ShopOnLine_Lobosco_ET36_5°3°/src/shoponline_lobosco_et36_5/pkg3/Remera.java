@@ -19,18 +19,19 @@ public class Remera extends Producto{
     }
 
     public double getPrecio() {
+        double precioFinal=0;
         if(talle=="S"){
-            precio+=(precio*5/100);
+            precioFinal=precio+(precio*5/100);
         }else if(talle=="M"){
-            precio+=(precio*10/100);
+            precioFinal=precio+(precio*10/100);
         }
         else if(talle=="L"){
-            precio+=(precio*15/100);
+            precioFinal=precio+(precio*15/100);
         }else if(talle=="XL"){
-            precio+=(precio*20/100);
+            precioFinal=precio+(precio*20/100);
         }
-        
-        return precio;
+
+        return precioFinal;
     }
     
     

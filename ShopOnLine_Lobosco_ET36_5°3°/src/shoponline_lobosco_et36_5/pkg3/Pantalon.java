@@ -22,16 +22,17 @@ public class Pantalon extends Producto{
     }
 
     public double getPrecio() {
+        double precioFinal=0;
         if(desc=="Oxford"){
-            precio+=(precio*15/100);
+            precioFinal =precio+(precio*15/100);
         }else if(desc=="Skinny"){
-            precio+=(precio*25/100);
+            precioFinal =precio+(precio*25/100);
         }
         else if(desc=="Recto"){
-            precio-=(precio*15/100);
+            precioFinal =precio-(precio*15/100);
         }
 
-        return precio;
+        return precioFinal;
     }
     
     
