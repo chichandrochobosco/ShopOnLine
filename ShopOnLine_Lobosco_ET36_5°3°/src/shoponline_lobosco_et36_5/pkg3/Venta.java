@@ -33,7 +33,12 @@ public class Venta {
         return importe;
     }
     public void imprimirFactura(){
+        System.out.println("Factura N° "+(cantVentas+1)+" - " + fecha);
+        for(int i =0;i<listProd.size(); i++){
         
+        System.out.println(listProd.get(i).toString());  
+    }
+        System.out.println("Total a pagar: .....$"+calcularImporteTotal());
     }
     
 }

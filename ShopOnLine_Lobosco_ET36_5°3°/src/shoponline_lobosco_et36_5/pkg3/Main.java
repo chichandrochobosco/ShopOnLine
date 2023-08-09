@@ -23,6 +23,7 @@ public class Main {
         qur funcion cumple cliente.
         */
         LocalDate fecha = LocalDate.now();
+        
         Cliente c = new Cliente("Carlos");
         Venta v = new Venta(fecha, c );
         
