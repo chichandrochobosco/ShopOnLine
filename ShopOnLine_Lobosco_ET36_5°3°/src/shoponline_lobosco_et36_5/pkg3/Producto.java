@@ -34,6 +34,10 @@ public abstract class Producto {
     public void setPrecio(double precio) {
         this.precio = precio;
     }
+
+    public int getCod() {
+        return cod;
+    }
     
     
     

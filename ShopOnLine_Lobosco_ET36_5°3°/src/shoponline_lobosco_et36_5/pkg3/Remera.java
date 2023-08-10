@@ -15,7 +15,7 @@ public class Remera extends Producto{
 
     @Override
     public String toString() {
-        return "Remera: "+"talle = "+talle;
+        return "Remera: talle: "+talle+", descripcion: "+desc+", precio: "+precio+", codigo: "+cod;
     }
 
     public double getPrecio() {

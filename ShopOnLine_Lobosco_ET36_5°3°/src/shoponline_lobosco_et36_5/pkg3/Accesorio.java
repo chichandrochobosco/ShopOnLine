@@ -20,7 +20,7 @@ public class Accesorio extends Producto{
 
     @Override
     public String toString() {
-        return "Accesorio{" + "peso=" + peso + ", metal=" + metal + '}';
+        return "Accesorio: peso: "+peso+", metal: "+metal+" , descripcion: "+desc+", precio: "+precio+", codigo: "+cod;
     }
 
     public double getPrecio() {

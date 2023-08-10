@@ -10,7 +10,7 @@ import java.util.ArrayList;
  */
 public class Venta {
     private static int cantVentas = 1090;
-    private int nroFact = cantVentas;
+    private int nroFact = 1090;
     private ArrayList<Producto> listProd;
     private Cliente cliente;
     private LocalDate fecha;
@@ -29,8 +29,9 @@ public class Venta {
     }
     public double calcularImporteTotal(){
         double importe = 0;
-        for(int i =0;i<listProd.size(); i++){
         
+        for(int i =0;i<listProd.size(); i++){
+        System.out.println("precio: "+listProd.get(i).getPrecio());
         importe += listProd.get(i).getPrecio() ;
         }
         
@@ -38,7 +39,8 @@ public class Venta {
         return importe;
     }
     public void imprimirFactura(){
-        System.out.println("Factura N° "+(nroFact+1)+" - " + fecha);
+        sumarNro();
+        System.out.println("Factura N° "+(nroFact)+" - " + fecha);
         for(int i =0;i<listProd.size(); i++){
         
         System.out.println(listProd.get(i).toString());  
