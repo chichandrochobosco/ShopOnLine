@@ -105,7 +105,7 @@ public class Main {
             for(Producto p: prod){
                 
                 if(p.getCod() == codC){
-                    //System.out.println(p.toString());
+                    
                     venta.agregarProducto(p);
                     
                     
@@ -133,19 +133,6 @@ public class Main {
     public static void main(String[] args) {
         ingresarProductos();
         venta();
-        /*
-        LocalDate fecha = LocalDate.now();
-        Producto p = new Remera("L", "Remera L", 100, 12);
-        Cliente c = new Cliente("Carlos");
-        //Venta v = new Venta(fecha, c );
-        
-        //v.agregarProducto(p);
-       // v.imprimirFactura();
-        
-        Venta v2 = new Venta(fecha, c);
-        v2.agregarProducto(p);
-        v2.imprimirFactura();
-        */
     }
     
 }
