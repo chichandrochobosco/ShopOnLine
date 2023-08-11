@@ -25,12 +25,12 @@ public class Accesorio extends Producto{
 
     public double getPrecio() {
         double precioFinal=0;
-        if(metal=="Acero"){
+        if("Acero".equals(metal)){
             precioFinal=precio+(precio*10/100);
-        }else if(metal=="Plata"){
+        }else if("Plata".equals(metal)){
             precioFinal=precio+(precio*15/100);
         }
-        else if(metal=="Oro"){
+        else if("Oro".equals(metal)){
             precioFinal=precio+(precio*20/100);
         }
         if(peso>=200 ){

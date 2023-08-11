@@ -18,16 +18,17 @@ public class Remera extends Producto{
         return "Remera: talle: "+talle+", descripcion: "+desc+", precio: "+precio+", codigo: "+cod;
     }
 
+    @Override
     public double getPrecio() {
         double precioFinal=0;
-        if(talle=="S"){
+        if("S".equals(talle)){
             precioFinal=precio+(precio*5/100);
-        }else if(talle=="M"){
+        }else if("M".equals(talle)){
             precioFinal=precio+(precio*10/100);
         }
-        else if(talle=="L"){
+        else if("L".equals(talle)){
             precioFinal=precio+(precio*15/100);
-        }else if(talle=="XL"){
+        }else if("XL".equals(talle)){
             precioFinal=precio+(precio*20/100);
         }
 

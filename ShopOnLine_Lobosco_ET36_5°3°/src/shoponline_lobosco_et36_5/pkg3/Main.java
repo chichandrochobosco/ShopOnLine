@@ -77,22 +77,22 @@ public class Main {
             in.nextLine();
             
         }while(ingresar==0);
-        for(int i=0; i<prod.size();i++){
-                System.out.println(prod.get(i));
-            }
+        
     }
     public static void venta(){
         Scanner in = new Scanner(System.in);
-        int ingresar=0, op, codC;
+        int ingresar=0, op, codC, ing=0;
         String nombre;
         ArrayList<Producto> ven = new ArrayList();
         
-        
         do{
-            System.out.println("Ingrese nombre: ");
-            nombre = in.nextLine();
-            Cliente c = new Cliente(nombre);
-            Venta venta = new Venta(LocalDate.now(), c);
+        
+        System.out.println("Ingrese nombre: ");
+        nombre = in.nextLine();
+        Cliente c = new Cliente(nombre);
+        Venta venta = new Venta(LocalDate.now(), c);
+        do{
+            
             System.out.println("Productos: ");
             for(int i=0; i<prod.size();i++){
                 System.out.println(prod.get(i));
@@ -101,36 +101,41 @@ public class Main {
             codC = in.nextInt();
             in.nextLine();
             
-            System.out.println("Por entrar al for");
+            int i=0;
             for(Producto p: prod){
-                System.out.println("Entro al for de prodcuto en venta, el codigo del producto es: "+p.getCod());
+                
                 if(p.getCod() == codC){
-                    System.out.println("se entro a la condicion"+p.getPrecio());
+                    //System.out.println(p.toString());
                     venta.agregarProducto(p);
-                    venta.calcularImporteTotal();
+                    
                     
                     // eliminae de array prod
-                    //prod.remove(codC);
+                    //prod.remove(i);
                 }
+                i++;
             }
             
             System.out.println("0-continuar compra otro numero-terminar compra: ");
             ingresar = in.nextInt();
             in.nextLine();
             if(ingresar!=0){
-               
+               venta.calcularImporteTotal();
                venta.imprimirFactura(); 
             }
         }while(ingresar==0);
+        System.out.println("Desea realizar otra compra? 0-SI otro numero-NO");
+        ing  = in.nextInt();
+        in.nextLine();
         
+        }while(ing==0);
     }
     
     public static void main(String[] args) {
         ingresarProductos();
         venta();
-        /**/
+        /*
         LocalDate fecha = LocalDate.now();
-        Remera p = new Remera("L", "Remera L", 100, 12);
+        Producto p = new Remera("L", "Remera L", 100, 12);
         Cliente c = new Cliente("Carlos");
         //Venta v = new Venta(fecha, c );
         
@@ -140,7 +145,7 @@ public class Main {
         Venta v2 = new Venta(fecha, c);
         v2.agregarProducto(p);
         v2.imprimirFactura();
-        
+        */
     }
     
 }
